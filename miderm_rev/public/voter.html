@@ -1,0 +1,25 @@
+<html>
+    <head>
+      <title>Voters</title>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+      <script src="javascripts/app.js"></script>
+    </head>
+    <body ng-app="comment" ng-controller="MainCtrl">
+        <div style="margin-left: 5cm;">
+             <h1>Voter Interface </h1>
+		<h1>Current Candidates</h1>
+                <div ng-repeat="comment in comments">
+		<input type= "checkbox" ng-model="comment.selected"> {{comment.title}}
+		</div>
+	<button ng-click="dovote()">
+	Submit Votes
+	</button>
+
+<h1> Submitted Ballot</h1>
+<div ng-repeat="comment in comments |orderBy: 'title'">
+{{comment.title}}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+var cities = ["Alpine", "Altamont", "Alton", "Altonah", "Orem", "Provo", "Lehi", "Salt Lake City", "Spanish Fork", "St.George"];
+var mfunc = function() {
+  var part = document.getElementById("partial").value;
+  var suggestions = document.getElementById("suggestions");
+  var inner = "<ul>";
+  console.log("part = "+part);
+  for(i = 0; i < cities.length; i++) {
+    if(cities[i].startsWith(part)) {
+      inner += "<li>"+cities[i]+"</li>";
+    }
+  }
+  inner+="</ul>";
+  suggestions.innerHTML = inner;
+};
+</script>
+</head>    
+<body>
+
+    <h1>Cities </h1>
+<p>
+
+      Enter City: <input type="text" id="partial" onkeyup="mfunc()">
+
+    <div id="suggestions">Suggested Cities:
+     <ul>
+    <li>Alpine</li>
+    <li>Altamont</li>
+    <li>Alton</li>
+    <li>Altonah</li>
+    <li>Orem</li>
+    <li>Provo</li>
+    <li>Lehi</li>
+    <li>Salt Lake City</li>
+    <li>Spanish Fork</li>
+    <li>St.George</li>
+    </ul>
+    </div>
+    </body>
+
+</html>

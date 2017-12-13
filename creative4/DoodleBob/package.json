@@ -1,0 +1,21 @@
+{
+   "name": "DoodleBob",
+   "description": "drawing canvas",
+   "dependencies" : {
+      "express": "4.x",
+      "socket.io": "*"
+   }
+
+
+var express = require('express'), 
+    app = express(),
+    http = require('http'),
+    io = require('socket.io');
+
+var server = http.createServer(app);
+var io = socketIo.listen(server);
+server.listen(8080);
+app.use(express.static(__dirname + '/public'));
+console.log("Server running on 127.0.0.1:8080");
+
+}

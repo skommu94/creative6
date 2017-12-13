@@ -30,7 +30,7 @@
                 <div ng-repeat="comment in comments | orderBy: 'title'">
                         <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
                                         {{comment.title}} - price $ {{comment.price}} - ordered {{comment.upvotes}}
-					<img class="pic" ng-src="{{comment.image}}">
+					<img class="pic" ng-src="{{i.Image}}">
                 </div>
             </div>
         </div>

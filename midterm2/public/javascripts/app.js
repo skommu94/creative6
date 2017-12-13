@@ -15,7 +15,7 @@ angular.module('comment', [])
       $scope.create({
         title: $scope.formContent,
         upvotes: 0,
-	price: 0,
+	price: $scope.priceField,
 	image: $scope.imageField,
       });
       $scope.formContent = '';
