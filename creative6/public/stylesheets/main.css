@@ -1,0 +1,19 @@
+body, pre {
+	font-family: Impact;
+	color: #142d91; 
+	user-select: none;
+	font-size: 1.0rem;
+	position: absolute;
+}
+
+body {
+	padding-bottom: 4rem;	
+	backround-color:blue;
+}
+
+.hacker-input {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+	padding: 0rem 0.2rem;
+}

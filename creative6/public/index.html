@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>MeTube</title>
+
+    <meta charset="UTF-8">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/messages.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="title-holder">
+        <div class="title">MeTube</div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div ng-view></div>
+</div>
+
+
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/routes.js"></script>
+<script src="javascripts/LoginController.js"></script>
+<script src="javascripts/LoginService.js"></script>
+<script src="javascripts/MessageController.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDf4DRUR-d5CwcmGDyyr5xYzf1itWkGJEk",
+    authDomain: "creative6-f5117.firebaseapp.com",
+    databaseURL: "https://creative6-f5117.firebaseio.com",
+    projectId: "creative6-f5117",
+    storageBucket: "creative6-f5117.appspot.com",
+    messagingSenderId: "225360616460"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
